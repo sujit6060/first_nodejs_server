@@ -1,0 +1,21 @@
+{{#each people}}
+
+<h1>{{name}}</h1>
+<h2>{{vaccinated}}</h2>
+{{/each}}
+{{#each people}}
+{{#if vaccinated}}
+<li style="color: green;">{{name}}</li>
+{{else}}
+<li style="color: red;">{{name}}</li>
+
+{{/if}}
+{{/each}}
+
+
+
+<form method="post" action="/submit">
+<input type="text" name="name">
+<button type="submit">Submit</button>
+
+</form>
